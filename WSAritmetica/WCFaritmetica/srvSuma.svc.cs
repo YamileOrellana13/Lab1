@@ -15,7 +15,7 @@ namespace WCFaritmetica
         {
             clsSuma obj = new clsSuma();
             obj.numeroA = numero1;
-            obj.numeroB = numero12;
+            obj.numeroB = numero2;
             obj.resultado = obj.numeroA + obj.numeroB;
             return obj;
         }
