@@ -11,12 +11,15 @@ namespace WCFaritmetica
 
     public class srvSuma : IsrvSuma
     {
-        public clsSuma suma(int numero1, int numero2)
+        public ClsSuma suma(int numero1, int numero2)
         {
-            clsSuma obj = new clsSuma();
+            ClsSuma obj = new ClsSuma();
             obj.numeroA = numero1;
             obj.numeroB = numero2;
             obj.resultado = obj.numeroA + obj.numeroB;
+            obj.mensaje = "Suma Satisfactoria";
+            if (obj.resultado < 0)
+                obj.error = "Resultado Negativo";
             return obj;
         }
     }

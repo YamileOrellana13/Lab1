@@ -14,13 +14,13 @@ namespace WCFaritmetica
     {
 
         [OperationContract]
-        clsSuma suma(int numero1, int numero2);
+        ClsSuma suma(int numero1, int numero2);
 
 
     }
 
     [DataContract]
-    public class clsSuma
+    public class ClsSuma:baseResultado
     {
         [DataMember]            
         public int numeroA { get; set; }
@@ -28,6 +28,13 @@ namespace WCFaritmetica
         public int numeroB { get; set; }
         [DataMember]
         public int resultado { get; set; }
+
+    }
+
+    public class baseResultado
+    {
+        public string mensaje { get; set; }
+        public string error { get; set; }
 
     }
 
